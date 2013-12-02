@@ -1,0 +1,125 @@
+extends template
+
+block html
+	<html class=rfq lang=en>
+
+block title
+	|<div style="bottom:12px">RFQ</div>
+
+block content
+	form.section(id="form1",action="http://api.maloweb.com/sylvesterrfq", method="post", target="_blank", enctype="multipart/form-data")
+		article.en
+			.col1
+				input.c(type="checkbox",value="on",name="i-cond",id="i-cond")
+				label(id="l-cond",for="i-cond") I already have a file detailing my shippment. 
+				br
+				br
+				.conditional
+					input(type="file",name="prixfile",id="prixfile")
+					label(for="prixfile") The file: 
+					br
+					br
+				.reverse-conditional
+					h2 Origin:
+					p
+						label.fixedwidth(for="i-nom") Name: 
+						input(name="i-nom",id="i-nom",type="text")
+						br
+						label.fixedwidth(for="i-mail") E-mail: 
+						input(name="i-mail",id="i-mail",type="email")
+						br
+						label.fixedwidth(for="i-tel",style="width:6em") Telephone: 
+						input(name="i-tel",id="i-tel",type="tel")
+						br
+						label.fixedwidth(for="i-com",style="width:6em") Company: 
+						input(name="i-com",id="i-com",type="text")
+						table
+							tr
+								td
+									label.fixedwidth(for="i-a-no") Adress: 
+								td
+									input(name="i-a-no",id="i-a-no",type="number",placeholder="Number")
+									input(name="i-a-rue",id="i-a-rue",type="text",placeholder="Street")
+									input(name="i-a-ville",id="i-a-ville",type="text",placeholder="City")
+									input(name="i-a-prov",id="i-a-prov",type="text",placeholder="State/Province")
+									input(name="i-a-code",id="i-a-code",type="text",placeholder="Postal Code")
+						br
+						label(for="i-pdate") Pick up date: 
+						input(name="i-pdate",id="i-pdate",type="date")
+						br
+						label(for="i-ptime") Pick up time: 
+						input(name="i-ptime",id="i-ptime",type="time")
+					h2 Destination: 
+					table
+						tr
+							td
+								label.fixedwidth(for="i-d-no") Adress: 
+							td
+								input(name="i-d-no",id="i-d-no",type="number",placeholder="Number")
+								input(name="i-d-rue",id="i-d-rue",type="text",placeholder="Street")
+								input(name="i-d-ville",id="i-d-ville",type="text",placeholder="City")
+								input(name="i-d-prov",id="i-d-prov",type="text",placeholder="State/Province")
+								input(name="i-d-code",id="i-d-code",type="text",placeholder="Postal Code")
+					p
+						br
+						label(for="i-ddate") Delivery date: 
+						input(name="i-ddate",id="i-ddate",type="date")
+						br
+						label(for="i-dtime") Delivery time: 
+						input(name="i-dtime",id="i-dtime",type="time")
+			.col2
+				h2 Details: 		
+				p
+					label(for="i-desc") Describe your product: 
+					textarea(name="i-desc",id="i-desc")
+					br
+					label.fixedwidth(for="i-quan") Quantity: 
+					input(name="i-quan",id="i-quan",type="number")
+					br
+					label.fixedwidth(for="i-weight") Weight: 
+					input(name="i-weight",id="i-weight",type="text")
+					br
+					label.fixedwidth(for="i-size") Size: 
+					input(name="i-size",id="i-size",type="text")
+					br
+					br
+					input(type="checkbox",value="on",name="i-pallet",id="i-pallet")
+					label(id="l-pallet",for="i-pallet") Goods on pallets? 
+					br
+					input(type="checkbox",value="on",name="i-stack",id="i-stack")
+					label(id="l-stack",for="i-stack") Stackable pallets? 
+					br
+					label Space taken in a trailer: 
+					select(name="space",form="form1")
+						option(value="1-4") 1/4 of trailer
+						option(value="1-2") 1/2 of trailer
+						option(value="3-4") 3/4 of trailer
+						option(value="full") Full trailer
+						option(value="unknown") Unknown
+					br
+					br
+					input.c(type="checkbox",value="on",name="i-value",id="i-value")
+					label(id="l-value",for="i-value") Declared value: 
+					span.conditional
+						label.fixedwidth(for="i-price") Amount: 
+						input(name="i-price",id="i-price",type="text")
+				p
+					input.c(type="checkbox",value="on",name="i-hazard",id="i-hazard")
+					label(id="l-hazard",for="i-hazard") Hazardous material: 
+					span.conditional
+						label.fixedwidth(for="i-hazcat") Category: 
+						input(name="i-hazcat",id="i-hazcat",type="text")
+
+				p
+					label(for="i-comment") Comments: 
+						textarea(name="i-comment",id="i-comment")
+				
+				input(type="submit",value="Submit")
+
+
+
+
+
+
+
+		

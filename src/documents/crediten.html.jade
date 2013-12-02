@@ -1,0 +1,138 @@
+extends template
+
+block html
+	<html class=credit lang=en>
+
+block title
+	|<div>Credit Application</div>
+
+block content
+	form.section(id="form1",action="http://api.maloweb.com/sylvestercredit", method="post", target="_blank", enctype="multipart/form-data")
+		article.en
+			.col1
+				input.c(type="checkbox",value="on",name="i-cond",id="i-cond")
+				label(id="l-cond",for="i-cond") I already have my credit application in a file. 
+				br
+				br
+				.conditional
+					input(type="file",name="creditfile",id="creditfile")
+					label(for="creditfile") The file: 
+					br
+					br
+				.reverse-conditional
+					label.fixedwidth(for="i-nom") Name: 
+					input(name="i-nom",id="i-nom",type="text")
+					br
+					label.fixedwidth(for="i-tel",style="width:6em") Telephone: 
+					input(name="i-tel",id="i-tel",type="tel")
+					br
+					label.fixedwidth(for="i-fax",style="width:6em") Fax: 
+					input(name="i-fax",id="i-fax",type="tel")
+					br
+					br
+					table
+						tr
+							td
+								label.fixedwidth(for="i-a-no") Adress: 
+							td
+								input(name="i-a-no",id="i-a-no",type="number",placeholder="Number")
+								input(name="i-a-rue",id="i-a-rue",type="text",placeholder="Street")
+								input(name="i-a-ville",id="i-a-ville",type="text",placeholder="City")
+								input(name="i-a-prov",id="i-a-prov",type="text",placeholder="State/Province")
+								input(name="i-a-code",id="i-a-code",type="text",placeholder="Postal Code")
+					br
+					label(for="i-sp") Special billing instructions if any: 
+					textarea(name="i-sp",id="i-sp")
+					br
+					br
+					label(for="i-type") Type of business: 
+					br
+					input(name="i-type",id="i-type",type="text")
+					br
+					label(for="i-lot") Length of time in business: 
+					br
+					input(name="i-lot",id="i-lot",type="text")
+					br
+					br
+					|Bill in: 
+					input(type="checkbox",value="on",name="i-us",id="i-us")
+					label(id="l-us",for="i-us") US 
+					input(type="checkbox",value="on",name="i-cdn",id="i-cdn")
+					label(id="l-cdn",for="i-cdn") CDN 
+					br
+					br
+					input(type="checkbox",value="on",name="i-pod",id="i-pod")
+					label(id="l-pod",for="i-pod") POD request? 
+					br
+					br
+			.col2
+				input.c(type="checkbox",value="on",name="i-cond",id="i-cond2")
+				label(id="l-cond2",for="i-cond2") Those informations are already in the file. 
+				br
+				br
+				.reverse-conditional
+					h2 BANKING INFORMATION
+					label.fixedwidth(for="i-bank",style="width:5em") Bank: 
+					input(name="i-bank",id="i-bank",type="text")
+					br
+					label.fixedwidth(for="i-branch",style="width:5em") Branch: 
+					input(name="i-branch",id="i-branch",type="text")
+					br
+					label.fixedwidth(for="i-account",style="width:5em") Account: 
+					input(name="i-account",id="i-account",type="text")
+					br
+					label.fixedwidth(for="i-btel",style="width:5em") Tel: 
+					input(name="i-btel",id="i-btel",type="text")
+					br
+					br
+					h2 CREDIT REFERENCES
+					ol
+						li
+							label.fixedwidth(for="i-ref-1-name",style="width:6em") Name: 
+							input(name="i-ref-1-name",id="i-ref-1-name",type="text")
+							br
+							label.fixedwidth(for="i-ref-1-contact",style="width:6em") Contact: 
+							input(name="i-ref-1-contact",id="i-ref-1-contact",type="text")
+							br
+							label.fixedwidth(for="i-ref-1-tel",style="width:6em") Telephone: 
+							input(name="i-ref-1-tel",id="i-ref-1-tel",type="tel")
+							br
+							label.fixedwidth(for="i-ref-1-fax",style="width:6em") Fax: 
+							input(name="i-ref-1-fax",id="i-ref-1-fax",type="tel")
+							br
+							br
+						li
+							label.fixedwidth(for="i-ref-2-name",style="width:6em") Name: 
+							input(name="i-ref-2-name",id="i-ref-2-name",type="text")
+							br
+							label.fixedwidth(for="i-ref-2-contact",style="width:6em") Contact: 
+							input(name="i-ref-2-contact",id="i-ref-2-contact",type="text")
+							br
+							label.fixedwidth(for="i-ref-2-tel",style="width:6em") Telephone: 
+							input(name="i-ref-2-tel",id="i-ref-2-tel",type="tel")
+							br
+							label.fixedwidth(for="i-ref-2-fax",style="width:6em") Fax: 
+							input(name="i-ref-2-fax",id="i-ref-2-fax",type="tel")
+							br
+							br
+						li
+							label.fixedwidth(for="i-ref-3-name",style="width:6em") Name: 
+							input(name="i-ref-3-name",id="i-ref-3-name",type="text")
+							br
+							label.fixedwidth(for="i-ref-3-contact",style="width:6em") Contact: 
+							input(name="i-ref-3-contact",id="i-ref-3-contact",type="text")
+							br
+							label.fixedwidth(for="i-ref-3-tel",style="width:6em") Telephone: 
+							input(name="i-ref-3-tel",id="i-ref-3-tel",type="tel")
+							br
+							label.fixedwidth(for="i-ref-3-fax",style="width:6em") Fax: 
+							input(name="i-ref-3-fax",id="i-ref-3-fax",type="tel")
+				input(type="submit",value="Submit")
+
+
+
+
+
+
+
+		

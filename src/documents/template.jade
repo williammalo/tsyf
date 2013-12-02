@@ -1,0 +1,152 @@
+<!doctype html>
+block html
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="chrome=1"><!--ie stuff-->
+<meta name=viewport content="width=device-width">
+//
+	|  _____________________________________
+	| |                                     |
+	| | Want to improve the code of         |
+	| | this website or report a bug?       |
+	| | Go to: github.com/williammalo/tsyf  |
+	| |___  ________________________________|
+	|     |/
+	|  __  __   _   _    _____      _____ ___       ___ ___  __  __ 
+	| |  \/  | /_\ | |  / _ \ \    / / __| _ )     / __/ _ \|  \/  |
+	| | |\/| |/ _ \| |_| (_) \ \/\/ /| _|| _ \  _ | (_| (_) | |\/| |
+	| |_|  |_/_/ \_\____\___/ \_/\_/ |___|___/ (_) \___\___/|_|  |_|
+	| maloweb.com
+	| 
+	|
+title Sylvester &amp; Forget | 
+	block title
+meta(name="description",content="Transport Sylvevester &amp; forget")
+//if IE
+	script(src="ie.js")
+
+link(href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Open+Sans+Condensed:700", rel="stylesheet")
+
+link(rel="stylesheet",href="style.css")
+link(rel="icon",type="image/png",href="favicon.png")
+
+//if IE9
+	<body class=ie>
+//if lt IE9
+	<body class="ie ie8">
+
+-var lorem="Lorem ipsum Ut anim sint aliquip id dolor sunt ea cillum anim mollit culpa laboris veniam officia qui laboris proident dolor nisi dolore ea enim minim sint eiusmod magna incididunt aliqua nisi Duis ad eiusmod quis sunt ut consequat ex Excepteur aliqua voluptate in mollit cillum irure voluptate reprehenderit qui id voluptate Duis proident ad voluptate esse voluptate dolor consectetur ut mollit est id occaecat Excepteur aliqua Duis sunt deserunt occaecat laborum ad sint ea et nisi pariatur laboris deserunt veniam non laborum ut aliquip do sint in irure anim et culpa adipisicing nulla anim fugiat amet eu aute ut in consectetur sed ad sunt proident aliquip ex laborum quis dolore voluptate laboris esse deserunt quis id ea veniam laborum esse occaecat dolor aute dolore."
+
+-var loremshort="Lorem ipsum Ut anim sint aliquip id dolor sunt ea cillum anim mollit culpa laboris veniam officia qui laboris proident dolor nisi dolore ea enim minim sint eiusmod magna incididunt aliqua nisi Duis ad eiusmod quis sunt ut consequat ex Excepteur aliqua voluptate in mollit cillum irure voluptate."
+
+
+header
+	img(src="logosimple.png")
+	h1
+		block title
+
+nav
+	a.logo S &amp; F
+		img(src="minilogo.png",alt="Sylvester &amp; Forget")
+	a.fr(href="fr") Accueil
+	a.en(href="en") Home
+
+	a.fr(href="aboutfr") À propos
+	a.en(href="abouten") About
+
+	a.fr(href="contactfr") Contact
+	a.en(href="contacten") Contact
+
+	.dropdown.dropdown-closed
+		span.fr Formulaires &amp; Documents 
+		span.en Forms &amp; Documents 
+		.dropdown-container
+			a.fr(href="documentsfr") Documents pdf
+			a.en(href="documentsen") Documents pdf
+			a.fr(href="embauchefr") Emploi
+			a.en(href="embaucheen") Jobs
+			a.fr(href="creditfr") Application Credit
+			a.en(href="crediteen") Credit Application
+			a.fr(href="prixfr") Demande de Prix
+			a.en(href="prixen") RFQ
+
+	a.fr.lang(href="en") English
+	a.en.lang(href="fr") Français
+
+block content
+
+footer
+	img.cat(src="cat.png")
+	| &copy; <script>document.write((new Date).getFullYear())</script> Sylvester &amp; Forget 
+	br
+	small.en Website by <a href="http://maloweb.com/en">maloweb.com</a>
+	small.fr Réalisation: <a href="http://maloweb.com/fr">maloweb.com</a>
+
+
+script
+	var prefix=(function(a,b,c,d){for(b in c=["Moz","Webkit","Ms","O"])if((d=c[b]+a[0].toUpperCase()+a.slice(1))in(new Image).style)a=d;return a})("transform")
+	var header=document.querySelector("header").style;
+	var h1=document.querySelector("h1").style;
+	var logo=document.querySelector("header img").style;
+
+	(function() {
+		var lastTime = 0;
+		var vendors = ['ms', 'moz', 'webkit', 'o'];
+		for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+			window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+			window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+								|| window[vendors[x]+'CancelRequestAnimationFrame'];
+		}
+	
+		if (!window.requestAnimationFrame)
+			window.requestAnimationFrame = function(callback, element) {
+				var currTime = new Date().getTime();
+				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+				var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+					timeToCall);
+				lastTime = currTime + timeToCall;
+				return id;
+			};
+	
+		if (!window.cancelAnimationFrame)
+			window.cancelAnimationFrame = function(id) {
+				clearTimeout(id);
+			};
+	}());
+
+	onscroll=function(){
+		requestAnimationFrame(function(){
+			var Δ=document.body.scrollTop||document.documentElement.scrollTop;
+			Δ=Math.max(Δ,0)
+			header[prefix]="translate3D(0,"+((Δ/2)|0)+"px,0px)"
+			h1[prefix]=    "translate3D(0,"+(-(Δ/2)|0)+"px,0px)"
+			logo[prefix]=  "translate3D(0,"+(-(Δ/5)|0)+"px,0px)"
+		})
+	};
+	
+	/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
+	if(typeof document!=="undefined"&&!("classList" in document.createElement("a"))){(function(j){if(!("HTMLElement" in j)&&!("Element" in j)){return}var a="classList",f="prototype",m=(j.HTMLElement||j.Element)[f],b=Object,k=String[f].trim||function(){return this.replace(/^\s+|\s+$/g,"")},c=Array[f].indexOf||function(q){var p=0,o=this.length;for(;p<o;p++){if(p in this&&this[p]===q){return p}}return -1},n=function(o,p){this.name=o;this.code=DOMException[o];this.message=p},g=function(p,o){if(o===""){throw new n("SYNTAX_ERR","An invalid or illegal string was specified")}if(/\s/.test(o)){throw new n("INVALID_CHARACTER_ERR","String contains an invalid character")}return c.call(p,o)},d=function(s){var r=k.call(s.className),q=r?r.split(/\s+/):[],p=0,o=q.length;for(;p<o;p++){this.push(q[p])}this._updateClassName=function(){s.className=this.toString()}},e=d[f]=[],i=function(){return new d(this)};n[f]=Error[f];e.item=function(o){return this[o]||null};e.contains=function(o){o+="";return g(this,o)!==-1};e.add=function(){var s=arguments,r=0,p=s.length,q,o=false;do{q=s[r]+"";if(g(this,q)===-1){this.push(q);o=true}}while(++r<p);if(o){this._updateClassName()}};e.remove=function(){var t=arguments,s=0,p=t.length,r,o=false;do{r=t[s]+"";var q=g(this,r);if(q!==-1){this.splice(q,1);o=true}}while(++s<p);if(o){this._updateClassName()}};e.toggle=function(p,q){p+="";var o=this.contains(p),r=o?q!==true&&"remove":q!==false&&"add";if(r){this[r](p)}return o};e.toString=function(){return this.join(" ")};if(b.defineProperty){var l={get:i,enumerable:true,configurable:true};try{b.defineProperty(m,a,l)}catch(h){if(h.number===-2146823252){l.enumerable=false;b.defineProperty(m,a,l)}}}else{if(b[f].__defineGetter__){m.__defineGetter__(a,i)}}}(self))};
+
+	(function(){
+		var i,dropdowns,action;
+		dropdowns=document.querySelectorAll(".dropdown")
+		i=dropdowns.length
+		for(;i--;){(function(){
+			var bla=dropdowns[i];
+			bla.onclick=function(){bla.classList.toggle("dropdown-closed")};
+			bla.onmouseleave=function(){bla.classList.add("dropdown-closed")};
+		})()}
+	})()
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+script
+	// set options for html5shiv
+	if(!window.html5){
+		window.html5 = {}; 
+	}
+	window.html5.shivMethods = false;
+
+<script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+<script src="js-webshim/minified/polyfiller.js"></script>
+script
+	//load all polyfill features
+	$.webshims.polyfill("forms forms-ext");

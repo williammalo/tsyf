@@ -1,0 +1,22 @@
+extends template
+
+
+block html
+	<html class=about lang=en>
+
+block title
+	|About
+
+block content
+	section
+		article.en
+			.col
+				include index-en-1.html
+
+	header.img2
+
+	section
+		article.en
+			.col.nopad
+				include index-en-2.html
+	img(src="foot2.jpg",style="width:100%")

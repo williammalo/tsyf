@@ -1,0 +1,143 @@
+extends template
+
+block html
+	<html class=hiring lang=en>
+
+block title
+	|<span style="top:-.2em">Jobs</span>
+
+block content
+	form.section(action="http://api.maloweb.com/sylvestermail", method="post", target="_blank", enctype="multipart/form-data")
+		article.en
+			.col1
+				p At Transport Sylvester & Forget Inc. we value the importance of people skills and are proud of our employees and truck drivers teamwork, the cornerstone of our company.
+				h4 Job:
+				p
+					input(type="checkbox",value="on",name="i-voiturier",id="i-voiturier")
+					label(id="l-voiturier",for="i-voiturier") Valet 
+					input(type="checkbox",value="on",name="i-chauffeur",id="i-chauffeur")
+					label(id="l-chauffeur",for="i-chauffeur") Driver 
+				h2 Personal Details:
+				p
+					label.fixedwidth(for="i-nom") Name: 
+					input(name="i-nom",id="i-nom",type="text",required)
+					br
+					table
+						tr
+							td
+								label.fixedwidth(for="i-a-no") address: 
+							td
+								input(name="i-a-no",id="i-a-no",type="number",placeholder="Number",required)
+								input(name="i-a-rue",id="i-a-rue",type="text",placeholder="Street",required)
+								input(name="i-a-ville",id="i-a-ville",type="text",placeholder="City",required)
+								input(name="i-a-code",id="i-a-code",type="text",placeholder="Postal Code",required)
+				p
+					label.fixedwidth(for="i-tel",style="width:6em") Telephone: 
+					input(name="i-tel",id="i-tel",type="tel")
+					br
+					label.fixedwidth(for="i-cel",style="width:6em") Cellphone: 
+					input(name="i-cel",id="i-cel",type="tel")
+				h2 Experience and qualifications:
+				p
+					label(for="i-ex-us") Years of experience in the US:
+					br
+					input(name="i-ex-us",id="i-ex-us",type="number")
+					br
+					label(for="i-ex-ca") Years of experience in Canada:
+					br
+					input(name="i-ex-ca",id="i-ex-ca",type="number")
+				p
+					label(for="i-nopermis1") Permit Number: 
+					br
+					input.inline(name="i-nopermis1",id="i-nopermis1",type="text",maxlength="5",style="width:6em",required)
+					|  - 
+					input.inline(name="i-nopermis2",id="i-nopermis2",type="text",maxlength="6",style="width:7em",required)
+					|  - 
+					input.inline(name="i-nopermis3",id="i-nopermis3",type="text",maxlength="2",style="width:3em",required)
+				p
+					label.fixedwidth(for="i-classes") Classes: 
+					input(name="i-classes",id="i-classes",type="text")
+					br
+					label.fixedwidth(for="i-prov") Province: 
+					input(name="i-prov",id="i-prov",type="text")
+					br
+					label.fixedwidth(for="i-date") Expiration: 
+					input(name="i-date",id="i-date",type="date")
+					br
+					label.fixedwidth(for="i-rest") Restriction: 
+					input(name="i-rest",id="i-rest",type="text")
+			.col2
+				p
+					input(type="checkbox",value="on",name="i-m",id="i-m")
+					label(id="l-m",for="i-m") Manual Transmission (M): 
+					br
+					input(type="checkbox",value="on",name="i-f",id="i-f")
+					label(id="l-f",for="i-f") Automatic Braking (F): 
+					br
+					input(type="checkbox",value="on",name="i-t",id="i-t")
+					label(id="l-t",for="i-t") Large Road Train (T): 
+				p
+					label(for="i-inapt") Number of demerit points: 
+					br
+					input(name="i-inapt",id="i-inapt",type="number",required)
+				p
+					input.c(type="checkbox",name="i-refus",id="i-refus")
+					label(id="l-refus",for="i-refus") Have you ever been refused a  commercial vehicle permit? 
+					input.c(type="checkbox",name="i-suspendu",id="i-suspendu") 
+					label(id="l-suspendu",for="i-suspendu") Has your permit ever been suspended? 
+					span.conditional
+						br
+						label(for="i-motifs") Motives:
+						textarea(name="i-motifs",id="i-motifs")
+				p
+					input(type="checkbox",value="on",name="i-pneumatiques",id="i-pneumatiques")
+					label(id="l-pneumatiques",for="i-pneumatiques") Do you have experience with pneumatic brakes? 
+					br
+					input(type="checkbox",value="on",name="i-dépistage",id="i-dépistage")
+					label(id="l-dépistage",for="i-dépistage") Are you part of a screening program for drugs and alcohol? 
+					br
+					input(type="checkbox",value="on",name="i-fast",id="i-fast")
+					label(id="l-fast",for="i-fast") Do you have a FAST card? 
+					br
+					label(for="i-fastexp") Expiration: 
+					input(name="i-fastexp",id="i-fastexp",type="Date")
+					br
+					input(type="checkbox",value="on",name="i-drug",id="i-drug")
+					label(id="l-drug",for="i-drug") Have you ever been caught using drugs? 
+
+				h2 Studies:
+				p
+					label(for="i-etude") Heavy vehicle driving course: 
+					input(name="i-etude",id="i-etude",type="text")
+					br
+					label(for="i-etude-inst") Institution: 
+					input(name="i-etude-inst",id="i-etude-inst",type="text")
+					br
+					label(for="i-etude-date") Date of Issue: 
+					input(name="i-etude-date",id="i-etude-date",type="Date")
+					br
+					input(type="checkbox",value="on",name="i-diploma",id="i-diploma")
+					label(id="l-diploma",for="i-diploma") Diploma or Certificate: 
+				h2 Attachements: 
+				p
+					input(type="file",name="cvfile",id="cvfile",required)
+					label(for="cvfile") Resume: 
+					br
+					input(type="file",name="permisfile",id="permisfile")
+					label(for="permisfile") Permit: 
+					br
+					input(type="file",name="saaqfile",id="saaqfile")
+					label(for="saaqfile") S.A.A.Q File: 
+					br
+					input(type="file",name="dossierfile",id="dossierfile")
+					label(for="dossierfile") Negative criminal record check: 
+
+				input(type="submit",value="Send")
+
+
+
+
+
+
+
+		

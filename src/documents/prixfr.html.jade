@@ -1,0 +1,125 @@
+extends template
+
+block html
+	<html class=rfq lang=fr>
+
+block title
+	|<div>Demande de Prix</div>
+
+block content
+	form.section(id="form1",action="http://api.maloweb.com/sylvesterrfq", method="post", target="_blank", enctype="multipart/form-data")
+		article.fr
+			.col1
+				input.c(type="checkbox",value="on",name="i-cond",id="i-cond")
+				label(id="l-cond",for="i-cond") J'ai un fichier qui décrit mon expédition. 
+				br
+				br
+				.conditional
+					input(type="file",name="prixfile",id="prixfile")
+					label(for="prixfile") Le fichier: 
+					br
+					br
+				.reverse-conditional
+					h2 Origine:
+					p
+						label.fixedwidth(for="i-nom",style="width:7em") Nom: 
+						input(name="i-nom",id="i-nom",type="text")
+						br
+						label.fixedwidth(for="i-mail",style="width:7em") E-mail: 
+						input(name="i-mail",id="i-mail",type="email")
+						br
+						label.fixedwidth(for="i-tel",style="width:7em") Téléphone: 
+						input(name="i-tel",id="i-tel",type="tel")
+						br
+						label.fixedwidth(for="i-com",style="width:7em") Compagnie: 
+						input(name="i-com",id="i-com",type="text")
+						table
+							tr
+								td
+									label.fixedwidth(for="i-a-no") Addresse: 
+								td
+									input(name="i-a-no",id="i-a-no",type="number",placeholder="Numéro")
+									input(name="i-a-rue",id="i-a-rue",type="text",placeholder="Rue")
+									input(name="i-a-ville",id="i-a-ville",type="text",placeholder="Ville")
+									input(name="i-a-prov",id="i-a-prov",type="text",placeholder="Province/État")
+									input(name="i-a-code",id="i-a-code",type="text",placeholder="Code Postale")
+						br
+						label(for="i-pdate") Date de cueillette: 
+						input(name="i-pdate",id="i-pdate",type="date")
+						br
+						label(for="i-ptime") Heure de cueillette: 
+						input(name="i-ptime",id="i-ptime",type="time")
+					h2 Destination: 
+					table
+						tr
+							td
+								label.fixedwidth(for="i-d-no") Addresse: 
+							td
+								input(name="i-d-no",id="i-d-no",type="number",placeholder="Numéro")
+								input(name="i-d-rue",id="i-d-rue",type="text",placeholder="Rue")
+								input(name="i-d-ville",id="i-d-ville",type="text",placeholder="Ville")
+								input(name="i-d-prov",id="i-d-prov",type="text",placeholder="Province/État")
+								input(name="i-d-code",id="i-d-code",type="text",placeholder="Code Postale")
+					p
+						br
+						label(for="i-ddate") Date de livraison: 
+						input(name="i-ddate",id="i-ddate",type="date")
+						br
+						label(for="i-dtime") Heure de livraison: 
+						input(name="i-dtime",id="i-dtime",type="time")
+			.col2
+				h2 Details: 		
+				p
+					label(for="i-desc") Décrivez votre produit: 
+					textarea(name="i-desc",id="i-desc")
+					br
+					label.fixedwidth(for="i-quan",style="width:8em") Quantité: 
+					input(name="i-quan",id="i-quan",type="number")
+					br
+					label.fixedwidth(for="i-weight",style="width:8em") Poid: 
+					input(name="i-weight",id="i-weight",type="text")
+					br
+					label.fixedwidth(for="i-size",style="width:8em") Dimmentions: 
+					input(name="i-size",id="i-size",type="text")
+					br
+					br
+					input(type="checkbox",value="on",name="i-pallet",id="i-pallet")
+					label(id="l-pallet",for="i-pallet") Marchandises sur pallettes? 
+					br
+					input(type="checkbox",value="on",name="i-stack",id="i-stack")
+					label(id="l-stack",for="i-stack") Pallettes empillables? 
+					br
+					label Espace prise sur remorque: 
+					select(name="space",form="form1")
+						option(value="1-4") 1/4 de la remorque
+						option(value="1-2") 1/2 de la remorque
+						option(value="3-4") 3/4 de la remorque
+						option(value="full") Toute la remorque
+						option(value="unknown") Inconu
+					br
+					br
+					input.c(type="checkbox",value="on",name="i-value",id="i-value")
+					label(id="l-value",for="i-value") Valeur Déclaré: 
+					span.conditional
+						label.fixedwidth(for="i-price") Nombre: 
+						input(name="i-price",id="i-price",type="text")
+				p
+					input.c(type="checkbox",value="on",name="i-hazard",id="i-hazard")
+					label(id="l-hazard",for="i-hazard") Matières dangereuses: 
+					span.conditional
+						label.fixedwidth(for="i-hazcat") Categorie: 
+						input(name="i-hazcat",id="i-hazcat",type="text")
+
+				p
+					label(for="i-comment") Commentaires: 
+						textarea(name="i-comment",id="i-comment")
+				
+				input(type="submit",value="Envoyer")
+
+
+
+
+
+
+
+		

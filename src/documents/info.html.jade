@@ -1,0 +1,44 @@
+-var lorem="Lorem ipsum Ut anim sint aliquip id dolor sunt ea cillum anim mollit culpa laboris veniam officia qui laboris proident dolor nisi dolore ea enim minim sint eiusmod magna incididunt aliqua nisi Duis ad eiusmod quis sunt ut consequat ex Excepteur aliqua voluptate in mollit cillum irure voluptate reprehenderit qui id voluptate Duis proident ad voluptate esse voluptate dolor consectetur ut mollit est id occaecat Excepteur aliqua Duis sunt deserunt occaecat laborum ad sint ea et nisi pariatur laboris deserunt veniam non laborum ut aliquip do sint in irure anim et culpa adipisicing nulla anim fugiat amet eu aute ut in consectetur sed ad sunt proident aliquip ex laborum quis dolore voluptate laboris esse deserunt quis id ea veniam laborum esse occaecat dolor aute dolore."
+
+-var loremshort="Lorem ipsum Ut anim sint aliquip id dolor sunt ea cillum anim mollit culpa laboris veniam officia qui laboris proident dolor nisi dolore ea enim minim sint eiusmod magna incididunt aliqua nisi Duis ad eiusmod quis sunt ut consequat ex Excepteur aliqua voluptate in mollit cillum irure voluptate."
+
+section
+	article.fr
+		.col
+			include index-fr-1.html
+	article.en
+		.col
+			include index-en-1.html
+
+header.img2
+
+section
+	article.fr
+		.col
+			include index-fr-2.html
+	article.en
+		.col
+			include index-en-2.html
+
+section
+	article
+		.col1=lorem
+		.col2=loremshort
+			form
+				br
+				label(for="foo") foo: 
+				input(type="email",id="foo")
+				br
+				label(for="bar") bar: 
+				input(type="text",id="bar")
+				br
+				input(type="checkbox",id="foo2")
+				label(for="foo2") foo: 
+				input(type="checkbox",id="bar2")
+				label(for="bar2") bar: 
+				br
+				input(type="submit",value="Submit")
+section
+	article
+		.col1=lorem
+		.col2=lorem
