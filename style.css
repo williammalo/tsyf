@@ -100,7 +100,8 @@ h1{padding:48px 96px 48px 96px;padding:3rem 6rem .6rem 6rem;font-size:5.4em;colo
 }.credit h1,.rfq h1{font-size:4em;padding-bottom:0;}
 @media (max-width:560px){.credit h1,.rfq h1{font-size:1.8em}
 }nav{background:#000;line-height:1em;position:fixed;top:0;right:0;z-index:2;-webkit-transform:translateZ(1px);}
-nav a,nav .dropdown{color:#ccc;white-space:nowrap;text-decoration:none;display:inline-block;padding:.5em 1em;background:#000;-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-o-transform:translateZ(1px);-ms-transform:translateZ(1px);transform:translateZ(1px);-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s;cursor:pointer;}
+@media (max-width:560px){nav{font-size:.8em}
+}nav a,nav .dropdown{color:#ccc;white-space:nowrap;text-decoration:none;display:inline-block;padding:.5em 1em;background:#000;-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-o-transform:translateZ(1px);-ms-transform:translateZ(1px);transform:translateZ(1px);-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s;cursor:pointer;}
 nav a:hover:not(.logo),nav .dropdown:hover:not(.logo){background:#c00;color:#fff;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s}
 nav,.dropdown-container{border-bottom:solid .3em #ccc}
 .dropdown:after{content:"\25BC";display:inline-block;-webkit-transform:scaleY(.6) rotate(180deg) translateY(.1em);-moz-transform:scaleY(.6) rotate(180deg) translateY(.1em);-o-transform:scaleY(.6) rotate(180deg) translateY(.1em);-ms-transform:scaleY(.6) rotate(180deg) translateY(.1em);transform:scaleY(.6) rotate(180deg) translateY(.1em);-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s}
@@ -119,6 +120,7 @@ nav>a:first-of-type:after,nav>a:first-of-type:before{content:"";display:block;po
 nav>a:first-of-type:before{left:-2.5em;border-right:solid 2.3em #ccc;border-bottom:solid 2.3em transparent;-webkit-box-shadow:.25em 0 0 #ccc;box-shadow:.25em 0 0 #ccc}
 @media (max-width:1000px){nav{width:100%;text-align:center;padding-right:0 !important}
 nav a:before{display:none !important}
+.logo{display:none !important}
 }@media (max-width:800px){nav{top:auto;bottom:0}
 footer{padding-bottom:5em !important}
 }section,.section{background:#fff}
