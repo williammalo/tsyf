@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Open Sans Condensed',sans-serif;text-transform:up
 a{color:#c00;display:inline-block}
 a.inline{display:inline}
 i{font-family:'social';font-style:normal;text-decoration:none}
-table{max-width:100%}
+table{max-width:100%;overflow:hidden}
 small{font-size:.62em;}
 @media (max-width:685px){small{font-size:.8em}
 }input,textarea,[type=checkbox]+label:after,[type=file]+label:after{max-width:100%;display:inline-block;font-size:1em;line-height:1.2em;padding:.4em;padding-top:.3em;padding-bottom:.1em;-webkit-border-radius:.3em;border-radius:.3em;border:solid .1em #ccc;outline:none;margin:.1em;margin-right:1em}
