@@ -34,6 +34,30 @@ html,input
 html
 	font-size:20px
 	line-height:0
+	@media (min-width:2300px)
+		font-size:42px
+	@media (max-width:2300px)
+		font-size:40px
+	@media (max-width:2200px)
+		font-size:38px
+	@media (max-width:2100px)
+		font-size:36px
+	@media (max-width:2000px)
+		font-size:34px
+	@media (max-width:1900px)
+		font-size:32px
+	@media (max-width:1800px)
+		font-size:30px
+	@media (max-width:1700px)
+		font-size:28px
+	@media (max-width:1600px)
+		font-size:26px
+	@media (max-width:1500px)
+		font-size:24px
+	@media (max-width:1400px)
+		font-size:22px
+	@media (max-width:1300px)
+		font-size:20px
 	@media (max-width:880px)
 		font-size:18px
 	@media (max-width:810px)
@@ -69,7 +93,8 @@ h1,h2,h3,h4,h5,h6
 a
 	color:brand
 	display:inline-block
-
+a.inline
+	display:inline
 i
 	font-family: 'social'
 	font-style:normal
@@ -308,11 +333,16 @@ h1
 	left:0
 	bottom:0
 	text-shadow:0 0 .3em #000
-	@media (max-width:420px)
+	white-space:nowrap
+	@media (max-width:560px)
 		font-size:4em
 		padding-bottom:24px//ie8
 		padding-bottom:1.5rem
-
+.credit h1,.rfq h1
+	font-size:4em
+	padding-bottom:0rem
+	@media (max-width:560px)
+		font-size:1.8em
 nav
 	background:#000
 	line-height:1em
@@ -376,9 +406,9 @@ nav,.dropdown-container
 
 .logo
 	color:transparent
-	width:105px
+	width:5em
 	img
-		height:20px
+		height:1em
 		position:absolute
 		top:.5em
 		left:.5em
@@ -457,7 +487,7 @@ section,.section
 article
 	white-space: pre-wrap
 	img,figure
-		width:35%
+		width:33%
 		box-shadow:0 0 5px rgba(#000,.2)
 		margin-bottom:.7em
 		margin-top:.7em
