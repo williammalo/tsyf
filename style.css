@@ -21,6 +21,7 @@ html{font-size:20px;line-height:0;}
 }@media (max-width:560px){html{font-size:18px}
 }@media (max-width:460px){html{font-size:16px}
 }body{margin:0}
+a,input,button,[type=checkbox]+label:after,[type=file]+label:after{-ms-touch-action:none !important}
 p{margin:0;width:100%;display:inline-block;margin-bottom:1.4em}
 p:last-child{margin-bottom:0}
 *:not(:last-child) p{margin-bottom:1.4em}
