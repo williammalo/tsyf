@@ -27,7 +27,8 @@ p:last-child{margin-bottom:0}
 *:not(:last-child) p{margin-bottom:1.4em}
 img{max-width:100%;border:none;height:auto}
 h1,h2,h3,h4,h5,h6{font-family:'Open Sans Condensed',sans-serif;text-transform:uppercase;margin:0;margin-bottom:1.4rem}
-a{color:#c00;display:inline-block}
+a{color:#c00;display:inline-block;text-decoration:none}
+a:hover{text-decoration:underline}
 a.inline{display:inline}
 i{font-family:'social';font-style:normal;text-decoration:none}
 table{max-width:100%;overflow:hidden}
