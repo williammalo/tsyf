@@ -1,4 +1,7 @@
-@import nib
+---
+autoprefix: true
+---
+vendors = official
 
 retina="(-webkit-min-device-pixel-ratio: 1.25),(min-resolution: 120dpi)"
 
@@ -14,8 +17,8 @@ retina="(-webkit-min-device-pixel-ratio: 1.25),(min-resolution: 120dpi)"
 	font-style: normal;
 }
 
-brand=#c00
-brand2=#ccc
+brand=#cc0000
+brand2=#cccccc
 
 
 /*
@@ -96,7 +99,7 @@ h1,h2,h3,h4,h5,h6
 	margin-bottom:1.4rem
 
 a
-	color:brand
+	color:#cc0000
 	display:inline-block
 	text-decoration: none
 a:hover
@@ -126,14 +129,14 @@ input,textarea
 	padding-top:.3em
 	padding-bottom:.1em
 	border-radius:.3em
-	border:solid .1em brand2
+	border:solid .1em #cccccc
 	outline:none
 	margin:.1em
 	margin-right:1em
 label.fixedwidth+input
 	width:calc(100% - 7.1em)
 input:focus,[type=checkbox]:focus+label:before,[type=file]:focus+label:before,textarea:focus
-	border-color:brand
+	border-color:#cc0000
 
 textarea
 	width:100%
@@ -158,11 +161,11 @@ td .fixedwidth
 	color:#fff
 
 [type=submit]
-	background:brand
-	border-color:brand
+	background:#cc0000
+	border-color:#cc0000
 	&:focus,&:hover
 		background:#fff
-		color:brand
+		color:#cc0000
 
 [type=checkbox],[type=file]
 	width:1px
@@ -183,16 +186,16 @@ td .fixedwidth
 [type=checkbox]+label:before
 	content:"✗"
 	padding:0
-	color:lighten(brand2,50%)
+	color:lighten(#cccccc,50%)
 	width:1em
 [type=file]+label:after
-	background:brand2
-	border-color:brand2
+	background:#cccccc
+	border-color:#cccccc
 	cursor:pointer
 	width:6em
 [type=file]+label:hover:after,[type=file]:focus+label:after
 	background:#fff
-	color:brand2
+	color:#cccccc
 [lang=fr] [type=file]+label:after
 	content:"Choisir Fichier"
 [lang=en] [type=file]+label:after
@@ -217,8 +220,8 @@ td .fixedwidth
 
 
 ::selection
-	background:rgba(brand,.2)
-	color:darken(brand,50%)
+	background:rgba(#cc0000,.2)
+	color:darken(#cc0000,50%)
 
 header
 	overflow:hidden
@@ -366,7 +369,7 @@ nav
 	@media (max-width:560px)
 		font-size:0.8em
 	& a,& .dropdown
-		color:brand2
+		color:#cccccc
 		white-space:nowrap
 		text-decoration:none
 		display:inline-block
@@ -376,12 +379,12 @@ nav
 		transition:all .3s
 		cursor:pointer
 		&:hover:not(.logo)
-			background:brand
+			background:#cc0000
 			color:#fff
 			transition:all .3s
 
 nav,.dropdown-container
-	border-bottom:solid .3em brand2
+	border-bottom:solid .3em #cccccc
 
 .dropdown:after
 	content:"\25BC"
@@ -438,7 +441,7 @@ nav,.dropdown-container
 .contact nav [href=contacten]
 .hiring nav [href=embauchefr]
 .hiring nav [href=embaucheen]
-	background:brand
+	background:#cc0000
 	color:#fff
 
 .home nav:hover [href=fr]:not(:hover)
@@ -452,11 +455,11 @@ nav,.dropdown-container
 .hiring nav:hover [href=embauchefr]:not(:hover)
 .hiring nav:hover [href=embaucheen]:not(:hover)
 	background:#000
-	color:brand2
+	color:#cccccc
 
 html body .lang
 	background:#000
-	color:brand2
+	color:#cccccc
 
 nav>a:first-of-type:after,nav>a:first-of-type:before
 	content:""
@@ -474,9 +477,9 @@ nav>a:first-of-type:after,nav>a:first-of-type:before
 
 nav>a:first-of-type:before
 	left:-2.5em
-	border-right:solid 2.3em brand2
+	border-right:solid 2.3em #cccccc
 	border-bottom:solid 2.3em transparent
-	box-shadow:.25em 0 0 brand2
+	box-shadow:.25em 0 0 #cccccc
 
 @media (max-width:1000px)
 	nav
@@ -543,10 +546,10 @@ article
 		top:-65px
 
 footer,html
-	background:darken(brand,7%)
+	background:darken(#cc0000,7%)
 
 footer
-	border-top:solid 1em brand
+	border-top:solid 1em #cc0000
 	color:#100
 	padding:3em
 	text-align:center
