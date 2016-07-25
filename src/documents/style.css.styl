@@ -134,7 +134,7 @@ input,textarea
 	margin:.1em
 label.fixedwidth+input
 	width:calc(100% - 6.2em)
-input:focus,[type=checkbox]:focus+label:before,[type=file]:focus+label:before,textarea:focus
+input:focus,[type=checkbox]:focus+label:before,[type=file]:focus+label:after,textarea:focus
 	border-color:brand
 
 textarea
@@ -176,7 +176,7 @@ td .fixedwidth
 	position:relative
 	opacity:1
 
-[type=checkbox]+label:before, [type=file]+label:before
+[type=checkbox]+label:before, [type=file]+label:after
 	height:1em
 	line-height:1
 	text-align:center
