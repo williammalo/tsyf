@@ -130,7 +130,9 @@ input,textarea
 	outline:none
 	margin:.1em
 	margin-right:1em
-input:focus,[type=checkbox]:focus+label:after,[type=file]:focus+label:after,textarea:focus
+label.fixedwidth+input
+	width:calc(100% - 7.1em)
+input:focus,[type=checkbox]:focus+label:before,[type=file]:focus+label:before,textarea:focus
 	border-color:brand
 
 textarea
@@ -172,13 +174,13 @@ td .fixedwidth
 	position:relative
 	opacity:1
 
-[type=checkbox]+label:after, [type=file]+label:after
+[type=checkbox]+label:before, [type=file]+label:before
 	height:1em
 	line-height:1
 	text-align:center
 	@extends input
 
-[type=checkbox]+label:after
+[type=checkbox]+label:before
 	content:"✗"
 	padding:0
 	color:lighten(brand2,50%)
@@ -187,6 +189,7 @@ td .fixedwidth
 	background:brand2
 	border-color:brand2
 	cursor:pointer
+	width:6em
 [type=file]+label:hover:after,[type=file]:focus+label:after
 	background:#fff
 	color:brand2
@@ -195,11 +198,11 @@ td .fixedwidth
 [lang=en] [type=file]+label:after
 	content:"Choose File"
 
-[type=checkbox]:checked+label:after
+[type=checkbox]:checked+label:before
 	content:"✓"
 	color:#0c0
 
-.ie8 [type=checkbox]+label:after
+.ie8 [type=checkbox]+label:before
 	display:none
 
 .conditional
