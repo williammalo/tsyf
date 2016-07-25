@@ -23,7 +23,7 @@ div:first-child:nth-last-child(4) ~ div
 html,
 input,
 [type=checkbox]+label:before,
-[type=file]+label:before {
+[type=file]+label:after {
   font-family: 'Open Sans', sans-serif;
   color: #333;
 }
@@ -123,7 +123,7 @@ a,
 input,
 button,
 [type=checkbox]+label:before,
-[type=file]+label:before {
+[type=file]+label:after {
   -ms-touch-action: none !important;
 }
 p {
@@ -185,7 +185,7 @@ small {
 input,
 textarea,
 [type=checkbox]+label:before,
-[type=file]+label:before {
+[type=file]+label:after {
   width: 100%;
   display: inline-block;
   font-size: 1em;
@@ -204,7 +204,7 @@ label.fixedwidth+input {
 }
 input:focus,
 [type=checkbox]:focus+label:before,
-[type=file]:focus+label:before,
+[type=file]:focus+label:after,
 textarea:focus {
   border-color: #c00;
 }
@@ -257,7 +257,7 @@ td .fixedwidth {
   opacity: 1;
 }
 [type=checkbox]+label:before,
-[type=file]+label:before {
+[type=file]+label:after {
   height: 1em;
   line-height: 1;
   text-align: center;
