@@ -1,71 +1,76 @@
 <!doctype html><html class=rfq lang=fr><meta charset=utf-8>
 <meta http-equiv=X-UA-Compatible content="chrome=1"><!--ie stuff-->
-<meta name=viewport content="width=device-width, minimal-ui"><!-- _____________________________________
-|                                     |
-| Want to improve the code of         |
-| this website or report a bug?       |
-| Go to: github.com/williammalo/tsyf  |
-|___  ________________________________|
-    |/
- __  __   _   _    _____      _____ ___       ___ ___  __  __ 
-|  \/  | /_\ | |  / _ \ \    / / __| _ )     / __/ _ \|  \/  |
-| |\/| |/ _ \| |_| (_) \ \/\/ /| _|| _ \  _ | (_| (_) | |\/| |
-|_|  |_/_/ \_\____\___/ \_/\_/ |___|___/ (_) \___\___/|_|  |_|
-maloweb.com
- 
-|--><title>Sylvester &amp; Forget | <div>Demande de Prix</div></title><meta name="description" content="Transport Sylvevester &amp; forget"/><!--[if IE]><script src="ie.js"></script><![endif]--><link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Open+Sans+Condensed:700" rel="stylesheet"/><link rel="stylesheet" href="style.css"/><link rel="icon" type="image/png" href="favicon.png"/><!--[if IE9]><body class=ie><![endif]--><!--[if lt IE9]><body class="ie ie8"><![endif]--><header><img src="logosimple.png"/><h1><div>Demande de Prix</div></h1></header><nav><a class="logo">S &amp; F<img src="minilogo.png" alt="Sylvester &amp; Forget"/></a><a href="fr" class="fr">Accueil</a><a href="en" class="en">Home</a><a href="aboutfr" class="fr">À propos</a><a href="abouten" class="en">About</a><a href="contactfr" class="fr">Contact</a><a href="contacten" class="en">Contact</a><div class="dropdown dropdown-closed"><span class="fr">Formulaires &amp; Documents </span><span class="en">Forms &amp; Documents </span><div class="dropdown-container"><a href="documentsfr" class="fr">Documents pdf</a><a href="documentsen" class="en">Documents pdf</a><a href="embauchefr" class="fr">Emploi</a><a href="embaucheen" class="en">Jobs</a><a href="creditfr" class="fr">Application Credit</a><a href="crediten" class="en">Credit Application</a><a href="prixfr" class="fr">Demande de Prix</a><a href="prixen" class="en">RFQ</a></div></div><a href="en" class="fr lang">English</a><a href="fr" class="en lang">Français</a></nav><form id="form1" action="http://tsyf.com/sylvesterrfq.php" method="post" target="_blank" enctype="multipart/form-data" class="section"><article class="fr"><div class="col1"><input type="checkbox" value="on" name="i-cond" id="i-cond" class="c"/><label id="l-cond" for="i-cond">J'ai un fichier qui décrit mon expédition. </label><br/><br/><div class="conditional"><input type="file" name="prixfile" id="prixfile"/><label for="prixfile">Le fichier: </label><br/><br/></div><div class="reverse-conditional"><h2>Origine:</h2><p><label for="i-nom" style="width:7em" class="fixedwidth">Nom: </label><input name="i-nom" id="i-nom" type="text"/><br/><label for="i-mail" style="width:7em" class="fixedwidth">E-mail: </label><input name="i-mail" id="i-mail" type="email"/><br/><label for="i-tel" style="width:7em" class="fixedwidth">Téléphone: </label><input name="i-tel" id="i-tel" type="tel"/><br/><label for="i-com" style="width:7em" class="fixedwidth">Compagnie: </label><input name="i-com" id="i-com" type="text"/><table><tr><td><label for="i-a-no" class="fixedwidth">Addresse: </label></td><td><input name="i-a-no" id="i-a-no" type="number" placeholder="Numéro"/><input name="i-a-rue" id="i-a-rue" type="text" placeholder="Rue"/><input name="i-a-ville" id="i-a-ville" type="text" placeholder="Ville"/><input name="i-a-prov" id="i-a-prov" type="text" placeholder="Province/État"/><input name="i-a-code" id="i-a-code" type="text" placeholder="Code Postale"/></td></tr></table><br/><label for="i-pdate">Date de cueillette: </label><input name="i-pdate" id="i-pdate" type="date"/><br/><label for="i-ptime">Heure de cueillette: </label><input name="i-ptime" id="i-ptime" type="time"/></p><h2>Destination: </h2><table><tr><td><label for="i-d-no" class="fixedwidth">Addresse: </label></td><td><input name="i-d-no" id="i-d-no" type="number" placeholder="Numéro"/><input name="i-d-rue" id="i-d-rue" type="text" placeholder="Rue"/><input name="i-d-ville" id="i-d-ville" type="text" placeholder="Ville"/><input name="i-d-prov" id="i-d-prov" type="text" placeholder="Province/État"/><input name="i-d-code" id="i-d-code" type="text" placeholder="Code Postale"/></td></tr></table><p><br/><label for="i-ddate">Date de livraison: </label><input name="i-ddate" id="i-ddate" type="date"/><br/><label for="i-dtime">Heure de livraison: </label><input name="i-dtime" id="i-dtime" type="time"/></p></div></div><div class="col2"><h2>Details: 		</h2><p><label for="i-desc">Décrivez votre produit: </label><textarea name="i-desc" id="i-desc"></textarea><br/><label for="i-quan" style="width:8em" class="fixedwidth">Quantité: </label><input name="i-quan" id="i-quan" type="number"/><br/><label for="i-weight" style="width:8em" class="fixedwidth">Poid: </label><input name="i-weight" id="i-weight" type="text"/><br/><label for="i-size" style="width:8em" class="fixedwidth">Dimmentions: </label><input name="i-size" id="i-size" type="text"/><br/><br/><input type="checkbox" value="on" name="i-pallet" id="i-pallet"/><label id="l-pallet" for="i-pallet">Marchandises sur pallettes? </label><br/><input type="checkbox" value="on" name="i-stack" id="i-stack"/><label id="l-stack" for="i-stack">Pallettes empillables? </label><br/><label>Espace prise sur remorque: </label><select name="space" form="form1"><option value="1-4">1/4 de la remorque</option><option value="1-2">1/2 de la remorque</option><option value="3-4">3/4 de la remorque</option><option value="full">Toute la remorque</option><option value="unknown">Inconu</option></select><br/><br/><input type="checkbox" value="on" name="i-value" id="i-value" class="c"/><label id="l-value" for="i-value">Valeur Déclaré: </label><span class="conditional"><label for="i-price" class="fixedwidth">Nombre: </label><input name="i-price" id="i-price" type="text"/></span></p><p><input type="checkbox" value="on" name="i-hazard" id="i-hazard" class="c"/><label id="l-hazard" for="i-hazard">Matières dangereuses: </label><span class="conditional"><label for="i-hazcat" class="fixedwidth">Categorie: </label><input name="i-hazcat" id="i-hazcat" type="text"/></span></p><p><label for="i-comment">Commentaires: <textarea name="i-comment" id="i-comment"></textarea></label></p><input type="submit" value="Envoyer"/></div></article></form><footer><img src="cat.png" class="cat"/>&copy; <script>document.write((new Date).getFullYear())</script> Sylvester &amp; Forget <br/><small class="en">Website by <a href="http://maloweb.com/en">maloweb.com</a></small><small class="fr">Réalisation: <a href="http://maloweb.com/fr">maloweb.com</a></small></footer><script>var prefix=(function(a,b,c,d){for(b in c=["Moz","Webkit","Ms","O"])if((d=c[b]+a[0].toUpperCase()+a.slice(1))in(new Image).style)a=d;return a})("transform")
+<meta name=viewport content="width=device-width, minimal-ui"><!--|  _____________________________________
+| |                                     |
+| | Want to improve the code of         |
+| | this website or report a bug?       |
+| | Go to: github.com/williammalo/tsyf  |
+| |___  ________________________________|
+|     |/
+|  __  __   _   _    _____      _____ ___       ___ ___  __  __ 
+| |  \/  | /_\ | |  / _ \ \    / / __| _ )     / __/ _ \|  \/  |
+| | |\/| |/ _ \| |_| (_) \ \/\/ /| _|| _ \  _ | (_| (_) | |\/| |
+| |_|  |_/_/ \_\____\___/ \_/\_/ |___|___/ (_) \___\___/|_|  |_|
+| maloweb.com
+| 
+|--><title>Sylvester &amp; Forget | <div>Demande de Prix</div></title><meta name="description" content="Transport Sylvevester &amp;amp; forget"/><!--if IEscript(src="ie.js")
+--><link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Open+Sans+Condensed:700" rel="stylesheet"/><link rel="stylesheet" href="style.css"/><link rel="icon" type="image/png" href="favicon.png"/><!--if IE9<body class=ie>--><!--if lt IE9<body class="ie ie8">
+--><header><img src="logosimple.png"/><h1><div>Demande de Prix</div></h1></header><nav><a class="logo">S &amp; F<img src="minilogo.png" alt="Sylvester &amp;amp; Forget"/></a><a href="fr" class="fr">Accueil</a><a href="en" class="en">Home</a><a href="aboutfr" class="fr">À propos</a><a href="abouten" class="en">About</a><a href="contactfr" class="fr">Contact</a><a href="contacten" class="en">Contact</a><div class="dropdown dropdown-closed"><span class="fr">Formulaires &amp; Documents </span><span class="en">Forms &amp; Documents </span><div class="dropdown-container"><a href="documentsfr" class="fr">Documents pdf</a><a href="documentsen" class="en">Documents pdf</a><a href="embauchefr" class="fr">Emploi</a><a href="embaucheen" class="en">Jobs</a><a href="creditfr" class="fr">Application Credit</a><a href="crediten" class="en">Credit Application</a><a href="prixfr" class="fr">Demande de Prix</a><a href="prixen" class="en">RFQ</a></div></div><a href="en" class="fr lang">English</a><a href="fr" class="en lang">Français</a></nav><form id="form1" action="http://tsyf.com/sylvesterrfq.php" method="post" target="_blank" enctype="multipart/form-data" class="section"><article class="fr"><div class="col1"><input type="checkbox" value="on" name="i-cond" id="i-cond" class="c"/><label id="l-cond" for="i-cond">J'ai un fichier qui décrit mon expédition. </label><br/><br/><div class="conditional"><input type="file" name="prixfile" id="prixfile"/><label for="prixfile">Le fichier: </label><br/><br/></div><div class="reverse-conditional"><h2>Origine:</h2><p><label for="i-nom" style="width:7em" class="fixedwidth">Nom: </label><input name="i-nom" id="i-nom" type="text"/><br/><label for="i-mail" style="width:7em" class="fixedwidth">E-mail: </label><input name="i-mail" id="i-mail" type="email"/><br/><label for="i-tel" style="width:7em" class="fixedwidth">Téléphone: </label><input name="i-tel" id="i-tel" type="tel"/><br/><label for="i-com" style="width:7em" class="fixedwidth">Compagnie: </label><input name="i-com" id="i-com" type="text"/><table><tr><td><label for="i-a-no" class="fixedwidth">Addresse: </label></td><td><input name="i-a-no" id="i-a-no" type="number" placeholder="Numéro"/><input name="i-a-rue" id="i-a-rue" type="text" placeholder="Rue"/><input name="i-a-ville" id="i-a-ville" type="text" placeholder="Ville"/><input name="i-a-prov" id="i-a-prov" type="text" placeholder="Province/État"/><input name="i-a-code" id="i-a-code" type="text" placeholder="Code Postale"/></td></tr></table><br/><label for="i-pdate">Date de cueillette: </label><input name="i-pdate" id="i-pdate" type="date"/><br/><label for="i-ptime">Heure de cueillette: </label><input name="i-ptime" id="i-ptime" type="time"/></p><h2>Destination: </h2><table><tr><td><label for="i-d-no" class="fixedwidth">Addresse: </label></td><td><input name="i-d-no" id="i-d-no" type="number" placeholder="Numéro"/><input name="i-d-rue" id="i-d-rue" type="text" placeholder="Rue"/><input name="i-d-ville" id="i-d-ville" type="text" placeholder="Ville"/><input name="i-d-prov" id="i-d-prov" type="text" placeholder="Province/État"/><input name="i-d-code" id="i-d-code" type="text" placeholder="Code Postale"/></td></tr></table><p><br/><label for="i-ddate">Date de livraison: </label><input name="i-ddate" id="i-ddate" type="date"/><br/><label for="i-dtime">Heure de livraison: </label><input name="i-dtime" id="i-dtime" type="time"/></p></div></div><div class="col2"><h2>Details: 		</h2><p><label for="i-desc">Décrivez votre produit: </label><textarea name="i-desc" id="i-desc"></textarea><br/><label for="i-quan" style="width:8em" class="fixedwidth">Quantité: </label><input name="i-quan" id="i-quan" type="number"/><br/><label for="i-weight" style="width:8em" class="fixedwidth">Poid: </label><input name="i-weight" id="i-weight" type="text"/><br/><label for="i-size" style="width:8em" class="fixedwidth">Dimmentions: </label><input name="i-size" id="i-size" type="text"/><br/><br/><input type="checkbox" value="on" name="i-pallet" id="i-pallet"/><label id="l-pallet" for="i-pallet">Marchandises sur pallettes? </label><br/><input type="checkbox" value="on" name="i-stack" id="i-stack"/><label id="l-stack" for="i-stack">Pallettes empillables? </label><br/><label>Espace prise sur remorque: </label><select name="space" form="form1"><option value="1-4">1/4 de la remorque</option><option value="1-2">1/2 de la remorque</option><option value="3-4">3/4 de la remorque</option><option value="full">Toute la remorque</option><option value="unknown">Inconu</option></select><br/><br/><input type="checkbox" value="on" name="i-value" id="i-value" class="c"/><label id="l-value" for="i-value">Valeur Déclaré: </label><span class="conditional"><label for="i-price" class="fixedwidth">Nombre: </label><input name="i-price" id="i-price" type="text"/></span></p><p><input type="checkbox" value="on" name="i-hazard" id="i-hazard" class="c"/><label id="l-hazard" for="i-hazard">Matières dangereuses: </label><span class="conditional"><label for="i-hazcat" class="fixedwidth">Categorie: </label><input name="i-hazcat" id="i-hazcat" type="text"/></span></p><p><label for="i-comment">Commentaires: <textarea name="i-comment" id="i-comment"></textarea></label></p><input type="submit" value="Envoyer"/></div></article></form><footer><img src="cat.png" class="cat"/>&copy; <script>document.write((new Date).getFullYear())</script> Sylvester &amp; Forget <br/><small class="en">Website by <a href="http://maloweb.com/en">maloweb.com</a></small><small class="fr">Réalisation: <a href="http://maloweb.com/fr">maloweb.com</a></small></footer><script>var prefix=(function(a,b,c,d){for(b in c=["Moz","Webkit","Ms","O"])if((d=c[b]+a[0].toUpperCase()+a.slice(1))in(new Image).style)a=d;return a})("transform")
 var header=document.querySelector("header").style;
 var h1=document.querySelector("h1").style;
 var logo=document.querySelector("header img").style;
 
 (function() {
- var lastTime = 0;
- var vendors = ['ms', 'moz', 'webkit', 'o'];
- for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-  window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-  window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-       || window[vendors[x]+'CancelRequestAnimationFrame'];
- }
- if (!window.requestAnimationFrame)
-  window.requestAnimationFrame = function(callback, element) {
-   var currTime = new Date().getTime();
-   var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-   var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
-    timeToCall);
-   lastTime = currTime + timeToCall;
-   return id;
-  };
- if (!window.cancelAnimationFrame)
-  window.cancelAnimationFrame = function(id) {
-   clearTimeout(id);
-  };
+	var lastTime = 0;
+	var vendors = ['ms', 'moz', 'webkit', 'o'];
+	for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+		window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+		window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+							|| window[vendors[x]+'CancelRequestAnimationFrame'];
+	}
+
+	if (!window.requestAnimationFrame)
+		window.requestAnimationFrame = function(callback, element) {
+			var currTime = new Date().getTime();
+			var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+			var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+				timeToCall);
+			lastTime = currTime + timeToCall;
+			return id;
+		};
+
+	if (!window.cancelAnimationFrame)
+		window.cancelAnimationFrame = function(id) {
+			clearTimeout(id);
+		};
 }());
 
 onscroll=function(){
- requestAnimationFrame(function(){
-  var Δ=document.body.scrollTop||document.documentElement.scrollTop;
-  Δ=Math.max(Δ,0)
-  header[prefix]="translate3D(0,"+((Δ/2)|0)+"px,0px)"
-  h1[prefix]=    "translate3D(0,"+(-(Δ/2)|0)+"px,0px)"
-  logo[prefix]=  "translate3D(0,"+(-(Δ/5)|0)+"px,0px)"
- })
+	requestAnimationFrame(function(){
+		var Δ=document.body.scrollTop||document.documentElement.scrollTop;
+		Δ=Math.max(Δ,0)
+		header[prefix]="translate3D(0,"+((Δ/2)|0)+"px,0px)"
+		h1[prefix]=    "translate3D(0,"+(-(Δ/2)|0)+"px,0px)"
+		logo[prefix]=  "translate3D(0,"+(-(Δ/5)|0)+"px,0px)"
+	})
 };
+
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
 if(typeof document!=="undefined"&&!("classList" in document.createElement("a"))){(function(j){if(!("HTMLElement" in j)&&!("Element" in j)){return}var a="classList",f="prototype",m=(j.HTMLElement||j.Element)[f],b=Object,k=String[f].trim||function(){return this.replace(/^\s+|\s+$/g,"")},c=Array[f].indexOf||function(q){var p=0,o=this.length;for(;p<o;p++){if(p in this&&this[p]===q){return p}}return -1},n=function(o,p){this.name=o;this.code=DOMException[o];this.message=p},g=function(p,o){if(o===""){throw new n("SYNTAX_ERR","An invalid or illegal string was specified")}if(/\s/.test(o)){throw new n("INVALID_CHARACTER_ERR","String contains an invalid character")}return c.call(p,o)},d=function(s){var r=k.call(s.className),q=r?r.split(/\s+/):[],p=0,o=q.length;for(;p<o;p++){this.push(q[p])}this._updateClassName=function(){s.className=this.toString()}},e=d[f]=[],i=function(){return new d(this)};n[f]=Error[f];e.item=function(o){return this[o]||null};e.contains=function(o){o+="";return g(this,o)!==-1};e.add=function(){var s=arguments,r=0,p=s.length,q,o=false;do{q=s[r]+"";if(g(this,q)===-1){this.push(q);o=true}}while(++r<p);if(o){this._updateClassName()}};e.remove=function(){var t=arguments,s=0,p=t.length,r,o=false;do{r=t[s]+"";var q=g(this,r);if(q!==-1){this.splice(q,1);o=true}}while(++s<p);if(o){this._updateClassName()}};e.toggle=function(p,q){p+="";var o=this.contains(p),r=o?q!==true&&"remove":q!==false&&"add";if(r){this[r](p)}return o};e.toString=function(){return this.join(" ")};if(b.defineProperty){var l={get:i,enumerable:true,configurable:true};try{b.defineProperty(m,a,l)}catch(h){if(h.number===-2146823252){l.enumerable=false;b.defineProperty(m,a,l)}}}else{if(b[f].__defineGetter__){m.__defineGetter__(a,i)}}}(self))};
 
 (function(){
- var i,dropdowns,action;
- dropdowns=document.querySelectorAll(".dropdown")
- i=dropdowns.length
- for(;i--;){(function(){
-  var bla=dropdowns[i];
-  bla.onclick=function(){bla.classList.toggle("dropdown-closed")};
-  //bla.onmouseleave=function(){bla.classList.add("dropdown-closed")};
- })()}
+	var i,dropdowns,action;
+	dropdowns=document.querySelectorAll(".dropdown")
+	i=dropdowns.length
+	for(;i--;){(function(){
+		var bla=dropdowns[i];
+		bla.onclick=function(){bla.classList.toggle("dropdown-closed")};
+		//bla.onmouseleave=function(){bla.classList.add("dropdown-closed")};
+	})()}
 })()
 </script><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script>// set options for html5shiv
 if(!window.html5){
- window.html5 = {}; 
+	window.html5 = {}; 
 }
 window.html5.shivMethods = false;
 </script><script src="js-webshim/minified/extras/modernizr-custom.js"></script>
@@ -91,6 +96,7 @@ FastClick.prototype.onClick=function(a){if(this.trackingClick)return this.target
 FastClick.prototype.destroy=function(){var a=this.layer;this.deviceIsAndroid&&(a.removeEventListener("mouseover",this.onMouse,!0),a.removeEventListener("mousedown",this.onMouse,!0),a.removeEventListener("mouseup",this.onMouse,!0));a.removeEventListener("click",this.onClick,!0);a.removeEventListener("touchstart",this.onTouchStart,!1);a.removeEventListener("touchmove",this.onTouchMove,!1);a.removeEventListener("touchend",this.onTouchEnd,!1);a.removeEventListener("touchcancel",this.onTouchCancel,!1)};
 FastClick.notNeeded=function(a){var c,b;if("undefined"===typeof window.ontouchstart)return!0;if(b=+(/Chrome\/([0-9]+)/.exec(navigator.userAgent)||[,0])[1])if(FastClick.prototype.deviceIsAndroid){if((c=document.querySelector("meta[name=viewport]"))&&(-1!==c.content.indexOf("user-scalable=no")||31<b&&window.innerWidth<=window.screen.width))return!0}else return!0;return"none"===a.style.msTouchAction?!0:!1};FastClick.attach=function(a){return new FastClick(a)};
 "undefined"!==typeof define&&define.amd?define(function(){return FastClick}):"undefined"!==typeof module&&module.exports?(module.exports=FastClick.attach,module.exports.FastClick=FastClick):window.FastClick=FastClick;
+
 window.addEventListener('load', function() {
- FastClick.attach(document.body);
+	FastClick.attach(document.body);
 }, false);</script>
