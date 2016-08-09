@@ -272,7 +272,7 @@ td .fixedwidth {
   background: #ccc;
   border-color: #ccc;
   cursor: pointer;
-  width: 6em;
+  width: 8em;
 }
 [type=file]+label:hover:after,
 [type=file]:focus+label:after {
