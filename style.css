@@ -353,9 +353,12 @@ header {
     background-image: url("700/head3.jpg");
   }
 }
-.home header img,
-.home header h1 {
+.home header img {
   display: none;
+}
+.home header h1 {
+  right: 0;
+  left: none;
 }
 .about header {
   background-image: url("head4.jpg");
