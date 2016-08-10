@@ -315,14 +315,9 @@ td .fixedwidth {
 header {
   overflow: hidden;
   background: url("head2.jpg");
-  padding-bottom: 28%;
+  padding-bottom: 36%;
   -webkit-background-size: cover;
   background-size: cover;
-}
-@media (max-width: 1000px) {
-  header {
-    background-image: url("2000/head2.jpg");
-  }
 }
 @media (max-width: 750px) {
   header {
