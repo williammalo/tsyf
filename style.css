@@ -363,11 +363,7 @@ header {
 }
 .about header {
   background-image: url("head4.jpg");
-}
-@media (max-width: 1000px) {
-  .about header {
-    background-image: url("2000/head4.jpg");
-  }
+  padding-bottom: 35%;
 }
 @media (max-width: 750px) {
   .about header {
