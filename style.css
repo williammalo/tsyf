@@ -341,12 +341,7 @@ header {
 }
 .home header {
   background-image: url("head3.jpg");
-  padding-bottom: 30%;
-}
-@media (max-width: 1000px) {
-  .home header {
-    background-image: url("2000/head3.jpg");
-  }
+  padding-bottom: 29%;
 }
 @media (max-width: 750px) {
   .home header {
