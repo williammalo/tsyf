@@ -359,6 +359,7 @@ header {
 .home header h1 {
   right: 0;
   left: none;
+  text-align: right;
 }
 .about header {
   background-image: url("head4.jpg");
