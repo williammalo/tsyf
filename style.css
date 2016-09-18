@@ -590,7 +590,7 @@ nav,
 }
 .dropdown .dropdown-container {
   display: block;
-  height: 8.3em;
+  height: 10.3em;
   -webkit-transition: height 0.3s;
   transition: height 0.3s;
   overflow: hidden;
