@@ -620,7 +620,9 @@ nav,
 .contact nav [href=contactfr],
 .contact nav [href=contacten],
 .hiring nav [href=embauchefr],
-.hiring nav [href=embaucheen] {
+.hiring nav [href=embaucheen],
+.intermodal nav [href=intermodalfr],
+.intermodal nav [href=intermodalen] {
   background: #c00;
   color: #fff;
 }
@@ -665,7 +667,7 @@ nav>a:first-of-type:before {
   -webkit-box-shadow: 0.25em 0 0 #ccc;
   box-shadow: 0.25em 0 0 #ccc;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1104px) {
   nav {
     width: 100%;
     text-align: center;
