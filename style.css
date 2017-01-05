@@ -23,7 +23,8 @@ div:first-child:nth-last-child(4) ~ div
 html,
 input,
 [type=checkbox]+label:before,
-[type=file]+label:after {
+[type=file]+label:after,
+#i-autre~article [for="i-autre"]:before {
   font-family: 'Open Sans', sans-serif;
   color: #333;
 }
@@ -123,7 +124,8 @@ a,
 input,
 button,
 [type=checkbox]+label:before,
-[type=file]+label:after {
+[type=file]+label:after,
+#i-autre~article [for="i-autre"]:before {
   -ms-touch-action: none !important;
 }
 p {
@@ -185,7 +187,8 @@ small {
 input,
 textarea,
 [type=checkbox]+label:before,
-[type=file]+label:after {
+[type=file]+label:after,
+#i-autre~article [for="i-autre"]:before {
   width: 100%;
   display: inline-block;
   font-size: 1em;
@@ -257,12 +260,14 @@ td .fixedwidth {
   opacity: 1;
 }
 [type=checkbox]+label:before,
-[type=file]+label:after {
+[type=file]+label:after,
+#i-autre~article [for="i-autre"]:before {
   height: 1em;
   line-height: 1;
   text-align: center;
 }
-[type=checkbox]+label:before {
+[type=checkbox]+label:before,
+#i-autre~article [for="i-autre"]:before {
   content: "✗";
   padding: 0;
   color: #e6e6e6;
@@ -285,7 +290,8 @@ td .fixedwidth {
 [lang=en] [type=file]+label:after {
   content: "Choose File";
 }
-[type=checkbox]:checked+label:before {
+[type=checkbox]:checked+label:before,
+#i-autre:checked~article [for="i-autre"]:before {
   content: "✓";
   color: #0c0;
 }
@@ -891,6 +897,9 @@ article .col.nocol {
   background: #fff url("foot3.jpg") center bottom no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
+}
+#i-autre:checked~article .other-hidden {
+  display: none;
 }
 @-webkit-keyframes kenburns {
   from {

@@ -7,7 +7,9 @@ block title
 	|Emploi
 
 block content
+
 	form.section(action="http://api.maloweb.com/sylvestermail.php", method="post", target="_blank", enctype="multipart/form-data")
+		input(type="checkbox",value="on",name="i-autre",id="i-autre")
 		article.fr
 			.col1
 				p Nous valorisons l’importance des relations humaines et nous sommes fiers du travail d’équipe accompli par nos employés et chauffeurs qui sont le moteur de notre entreprise.
@@ -16,7 +18,8 @@ block content
 					input(type="checkbox",value="on",name="i-voiturier",id="i-voiturier")
 					label(id="l-voiturier",for="i-voiturier") Voiturier 
 					input(type="checkbox",value="on",name="i-chauffeur",id="i-chauffeur")
-					label(id="l-chauffeur",for="i-chauffeur") Chauffeur 
+					label(id="l-chauffeur",for="i-chauffeur") Chauffeur
+					label(id="l-chauffeur",for="i-autre") Autre
 				h2 Détails Personnels:
 				p
 					label.fixedwidth(for="i-nom") Nom: 
@@ -37,8 +40,8 @@ block content
 					br
 					label.fixedwidth(for="i-cel",style="width:6em") Cellulaire: 
 					input(name="i-cel",id="i-cel",type="tel")
-				h2 Expérience et qualifications:
-				p
+				h2.other-hidden Expérience et qualifications:
+				p.other-hidden
 					label(for="i-ex-us") Nombre d'années d'expérience aux États-Unis:
 					br
 					input(name="i-ex-us",id="i-ex-us",type="text")
@@ -46,7 +49,7 @@ block content
 					label(for="i-ex-ca") Nombre d'années d'expérience au Canada:
 					br
 					input(name="i-ex-ca",id="i-ex-ca",type="text")
-				p
+				p.other-hidden
 					label(for="i-nopermis1") No. de permis: 
 					br
 					input.inline(name="i-nopermis1",id="i-nopermis1",type="text",maxlength="5",style="width:6em",required)
@@ -54,7 +57,7 @@ block content
 					input.inline(name="i-nopermis2",id="i-nopermis2",type="text",maxlength="6",style="width:7em",required)
 					|  - 
 					input.inline(name="i-nopermis3",id="i-nopermis3",type="text",maxlength="2",style="width:3em",required)
-				p
+				p.other-hidden
 					label.fixedwidth(for="i-classes") Classes: 
 					input(name="i-classes",id="i-classes",type="text")
 					br
@@ -67,7 +70,7 @@ block content
 					label.fixedwidth(for="i-rest") Restriction: 
 					input(name="i-rest",id="i-rest",type="text")
 			.col2
-				p
+				p.other-hidden
 					input(type="checkbox",value="on",name="i-m",id="i-m")
 					label(id="l-m",for="i-m") Transmission Manuelle (M): 
 					br
@@ -76,11 +79,11 @@ block content
 					br
 					input(type="checkbox",value="on",name="i-t",id="i-t")
 					label(id="l-t",for="i-t") Grand Train Routier (T): 
-				p
+				p.other-hidden
 					label(for="i-inapt") Nombre de points d'inaptitude: 
 					br
 					input(name="i-inapt",id="i-inapt",type="number",required)
-				p
+				p.other-hidden
 					input.c(type="checkbox",name="i-refus",id="i-refus")
 					label(id="l-refus",for="i-refus") Vous a-t-on déjà refusé un permis pour conduire un véhicule commercial? 
 					input.c(type="checkbox",name="i-suspendu",id="i-suspendu") 
@@ -89,7 +92,7 @@ block content
 						br
 						label(for="i-motifs") Motifs:
 						textarea(name="i-motifs",id="i-motifs")
-				p
+				p.other-hidden
 					input(type="checkbox",value="on",name="i-pneumatiques",id="i-pneumatiques")
 					label(id="l-pneumatiques",for="i-pneumatiques") Avez-vous une connaissance du système de freins pneumatiques? 
 					br
@@ -105,8 +108,8 @@ block content
 					input(type="checkbox",value="on",name="i-drug",id="i-drug")
 					label(id="l-drug",for="i-drug") Avez-vous déjà eu des résultats positifs suite à un examen de dépistage de drogue? 
 
-				h2 Études: 
-				p
+				h2.other-hidden Études: 
+				p.other-hidden
 					label(for="i-etude") Cours de conduite de véhicules lourds: 
 					br
 					input(name="i-etude",id="i-etude",type="text")
@@ -126,14 +129,14 @@ block content
 					input(type="file",name="cvfile",id="cvfile",required)
 					label(for="cvfile") CV: 
 					br
-					input(type="file",name="permisfile",id="permisfile")
-					label(for="permisfile") Permis: 
+					input.other-hidden(type="file",name="permisfile",id="permisfile")
+					label.other-hidden(for="permisfile") Permis: 
 					br
-					input(type="file",name="saaqfile",id="saaqfile")
-					label(for="saaqfile") Dossier de la S.A.A.Q: 
+					input.other-hidden(type="file",name="saaqfile",id="saaqfile")
+					label.other-hidden(for="saaqfile") Dossier de la S.A.A.Q: 
 					br
-					input(type="file",name="dossierfile",id="dossierfile")
-					label(for="dossierfile") Recherche négative de dossier judiciaire: 
+					input.other-hidden(type="file",name="dossierfile",id="dossierfile")
+					label.other-hidden(for="dossierfile") Recherche négative de dossier judiciaire: 
 
 				input(type="submit",value="Envoyer")
 

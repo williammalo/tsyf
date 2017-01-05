@@ -8,15 +8,17 @@ block title
 
 block content
 	form.section(action="http://api.maloweb.com/sylvestermail.php", method="post", target="_blank", enctype="multipart/form-data")
+		input(type="checkbox",value="on",name="i-autre",id="i-autre")
 		article.en
 			.col1
-				p At Transport Sylvester & Forget Inc. we value the importance of people skills and are proud of our employees and truck drivers teamwork, the cornerstone of our company.
+				p At Transport Sylvester &amp; Forget Inc. we value the importance of people skills and are proud of our employees and truck drivers teamwork, the cornerstone of our company.
 				h4 Job:
 				p
 					input(type="checkbox",value="on",name="i-voiturier",id="i-voiturier")
 					label(id="l-voiturier",for="i-voiturier") Valet 
 					input(type="checkbox",value="on",name="i-chauffeur",id="i-chauffeur")
-					label(id="l-chauffeur",for="i-chauffeur") Driver 
+					label(id="l-chauffeur",for="i-chauffeur") Driver
+					label(id="l-chauffeur",for="i-autre") Other
 				h2 Personal Details:
 				p
 					label.fixedwidth(for="i-nom") Name: 
@@ -37,8 +39,8 @@ block content
 					br
 					label.fixedwidth(for="i-cel",style="width:6em") Cellphone: 
 					input(name="i-cel",id="i-cel",type="tel")
-				h2 Experience and qualifications:
-				p
+				h2.other-hidden Experience and qualifications:
+				p.other-hidden
 					label(for="i-ex-us") Years of experience in the US:
 					br
 					input(name="i-ex-us",id="i-ex-us",type="text")
@@ -46,7 +48,7 @@ block content
 					label(for="i-ex-ca") Years of experience in Canada:
 					br
 					input(name="i-ex-ca",id="i-ex-ca",type="text")
-				p
+				p.other-hidden
 					label(for="i-nopermis1") Permit Number: 
 					br
 					input.inline(name="i-nopermis1",id="i-nopermis1",type="text",maxlength="5",style="width:6em",required)
@@ -54,7 +56,7 @@ block content
 					input.inline(name="i-nopermis2",id="i-nopermis2",type="text",maxlength="6",style="width:7em",required)
 					|  - 
 					input.inline(name="i-nopermis3",id="i-nopermis3",type="text",maxlength="2",style="width:3em",required)
-				p
+				p.other-hidden
 					label.fixedwidth(for="i-classes") Classes: 
 					input(name="i-classes",id="i-classes",type="text")
 					br
@@ -67,7 +69,7 @@ block content
 					label.fixedwidth(for="i-rest") Restriction: 
 					input(name="i-rest",id="i-rest",type="text")
 			.col2
-				p
+				p.other-hidden
 					input(type="checkbox",value="on",name="i-m",id="i-m")
 					label(id="l-m",for="i-m") Manual Transmission (M): 
 					br
@@ -76,11 +78,11 @@ block content
 					br
 					input(type="checkbox",value="on",name="i-t",id="i-t")
 					label(id="l-t",for="i-t") Large Road Train (T): 
-				p
+				p.other-hidden
 					label(for="i-inapt") Number of demerit points: 
 					br
 					input(name="i-inapt",id="i-inapt",type="number",required)
-				p
+				p.other-hidden
 					input.c(type="checkbox",name="i-refus",id="i-refus")
 					label(id="l-refus",for="i-refus") Have you ever been refused a  commercial vehicle permit? 
 					input.c(type="checkbox",name="i-suspendu",id="i-suspendu") 
@@ -89,7 +91,7 @@ block content
 						br
 						label(for="i-motifs") Motives:
 						textarea(name="i-motifs",id="i-motifs")
-				p
+				p.other-hidden
 					input(type="checkbox",value="on",name="i-pneumatiques",id="i-pneumatiques")
 					label(id="l-pneumatiques",for="i-pneumatiques") Do you have experience with pneumatic brakes? 
 					br
@@ -105,8 +107,8 @@ block content
 					input(type="checkbox",value="on",name="i-drug",id="i-drug")
 					label(id="l-drug",for="i-drug") Have you ever been caught using drugs? 
 
-				h2 Studies:
-				p
+				h2.other-hidden Studies:
+				p.other-hidden
 					label(for="i-etude") Heavy vehicle driving course: 
 					br
 					input(name="i-etude",id="i-etude",type="text")
@@ -126,14 +128,14 @@ block content
 					input(type="file",name="cvfile",id="cvfile",required)
 					label(for="cvfile") Resume: 
 					br
-					input(type="file",name="permisfile",id="permisfile")
-					label(for="permisfile") Permit: 
+					input.other-hidden(type="file",name="permisfile",id="permisfile")
+					label.other-hidden(for="permisfile") Permit: 
 					br
-					input(type="file",name="saaqfile",id="saaqfile")
-					label(for="saaqfile") S.A.A.Q File: 
+					input.other-hidden(type="file",name="saaqfile",id="saaqfile")
+					label.other-hidden(for="saaqfile") S.A.A.Q File: 
 					br
-					input(type="file",name="dossierfile",id="dossierfile")
-					label(for="dossierfile") Negative criminal record check: 
+					input.other-hidden(type="file",name="dossierfile",id="dossierfile")
+					label.other-hidden(for="dossierfile") Negative criminal record check: 
 
 				input(type="submit",value="Send")
 

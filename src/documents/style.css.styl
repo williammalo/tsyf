@@ -176,13 +176,13 @@ td .fixedwidth
 	position:relative
 	opacity:1
 
-[type=checkbox]+label:before, [type=file]+label:after
+[type=checkbox]+label:before, [type=file]+label:after, ,#i-autre~article [for="i-autre"]:before
 	height:1em
 	line-height:1
 	text-align:center
 	@extends input
 
-[type=checkbox]+label:before
+[type=checkbox]+label:before,#i-autre~article [for="i-autre"]:before
 	content:"✗"
 	padding:0
 	color:lighten(brand2,50%)
@@ -200,7 +200,7 @@ td .fixedwidth
 [lang=en] [type=file]+label:after
 	content:"Choose File"
 
-[type=checkbox]:checked+label:before
+[type=checkbox]:checked+label:before,#i-autre:checked~article [for="i-autre"]:before
 	content:"✓"
 	color:#0c0
 
@@ -649,3 +649,9 @@ article .col.nocol
 .contact .section
 	background:#fff url(foot3.jpg) center bottom no-repeat
 	background-size:contain
+
+#i-autre:checked~article .other-hidden{
+	display:none
+}
+
+
