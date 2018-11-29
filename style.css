@@ -551,12 +551,16 @@ nav .dropdown {
   transition: all 0.3s;
   cursor: pointer;
 }
-nav a:hover:not(.logo),
-nav .dropdown:hover:not(.logo) {
+nav a:hover,
+nav .dropdown:hover {
   background: #c00;
   color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+nav a .logo:hover,
+nav .dropdown .logo:hover {
+  color: transparent;
 }
 nav,
 .dropdown-container {
@@ -617,8 +621,6 @@ nav,
   left: 0.5em;
   z-index: 1;
 }
-.home nav [href=fr],
-.home nav [href=en],
 .services nav [href=servicesfr],
 .services nav [href=servicesen],
 .about nav [href=aboutfr],
@@ -632,8 +634,11 @@ nav,
   background: #c00;
   color: #fff;
 }
-.home nav:hover [href=fr]:not(:hover),
-.home nav:hover [href=en]:not(:hover),
+.home nav [href=fr],
+.home nav [href=en] {
+  background: #c00;
+  color: transparent;
+}
 .services nav:hover [href=servicesfr]:not(:hover),
 .services nav:hover [href=servicesen]:not(:hover),
 .about nav:hover [href=aboutfr]:not(:hover),
@@ -644,6 +649,11 @@ nav,
 .hiring nav:hover [href=embaucheen]:not(:hover) {
   background: #000;
   color: #ccc;
+}
+.home nav:hover [href=fr]:not(:hover),
+.home nav:hover [href=en]:not(:hover) {
+  background: #000;
+  color: transparent;
 }
 html body .lang {
   background: #000;

@@ -373,10 +373,12 @@ nav
 		transform:translateZ(1px)
 		transition:all .3s
 		cursor:pointer
-		&:hover:not(.logo)
+		&:hover
 			background:brand
 			color:#fff
 			transition:all .3s
+		& .logo:hover
+			color:transparent
 
 nav,.dropdown-container
 	border-bottom:solid .3em brand2
@@ -425,9 +427,6 @@ nav,.dropdown-container
 		left:.5em
 		z-index:1
 
-
-.home nav [href=fr]
-.home nav [href=en]
 .services nav [href=servicesfr]
 .services nav [href=servicesen]
 .about nav [href=aboutfr]
@@ -441,8 +440,11 @@ nav,.dropdown-container
 	background:brand
 	color:#fff
 
-.home nav:hover [href=fr]:not(:hover)
-.home nav:hover [href=en]:not(:hover)
+.home nav [href=fr]
+.home nav [href=en]
+	background:brand
+	color:transparent
+
 .services nav:hover [href=servicesfr]:not(:hover)
 .services nav:hover [href=servicesen]:not(:hover)
 .about nav:hover [href=aboutfr]:not(:hover)
@@ -453,6 +455,11 @@ nav,.dropdown-container
 .hiring nav:hover [href=embaucheen]:not(:hover)
 	background:#000
 	color:brand2
+
+.home nav:hover [href=fr]:not(:hover)
+.home nav:hover [href=en]:not(:hover)
+	background:#000
+	color:transparent
 
 html body .lang
 	background:#000
