@@ -45,10 +45,13 @@ header
 		block title
 
 nav
-	a.logo S &amp; F
+	a.logo.fr(href="fr") S &amp; F
 		img(src="minilogo.png",alt="Sylvester &amp; Forget")
-	a.fr(href="fr") Accueil
-	a.en(href="en") Home
+	a.logo.en(href="en") S &amp; F
+		img(src="minilogo.png",alt="Sylvester &amp; Forget")
+
+	a.fr(href="logisticfr") Logistique
+	a.en(href="logisticen") Logistics
 
 	a.fr(href="aboutfr") À propos
 	a.en(href="abouten") About
@@ -79,10 +82,7 @@ block content
 
 footer
 	img.cat(src="cat.png")
-	| &copy; <script>document.write((new Date).getFullYear())</script> Sylvester &amp; Forget 
-	br
-	small.en Website by <a href="http://maloweb.com/en">maloweb.com</a>
-	small.fr Réalisation: <a href="http://maloweb.com/fr">maloweb.com</a>
+	| &copy; <script>document.write((new Date).getFullYear())</script> Sylvester &amp; Forget
 
 
 script.
