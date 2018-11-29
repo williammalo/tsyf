@@ -611,7 +611,7 @@ nav,
   transition: height 0.3s;
 }
 .logo {
-  color: transparent;
+  color: transparent !important;
   width: 5em;
 }
 .logo img {
