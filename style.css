@@ -634,8 +634,8 @@ nav,
   background: #c00;
   color: #fff;
 }
-.home nav [href=fr],
-.home nav [href=en] {
+.home nav [href=fr].fr,
+.home nav [href=en].en {
   background: #c00;
   color: transparent;
 }
